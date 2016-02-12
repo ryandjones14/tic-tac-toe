@@ -1,38 +1,74 @@
 body{
   background-color: rgb(250,250,250);
   text-align: center;
+  /*position: absolute;*/
+  top: 200px;
 }
-h1{
-
-}
-#game-board{
-  background-color: rgb(100,100,100);
+header{
+  height: 200px;
+  width: 100%;
+  background-color: black;
+  color: rgb(250,250,250);
+  margin-top: -20px;
   position: relative;
 }
-  form{
+  h1{
     position: relative;
+    top: 40%;
   }
-  input{
-    background-color: rgb(200,200,200);
-    width: 3em;
-    height: 3em;
-    position: relative;
-    margin: 3px;
-    top: 200px;
+#game{
+  /*background-color: rgb(100,100,100);*/
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  clear: both;
+}
+  #p1{
+    float: left;
+    margin: 5px;
+    padding: 10px;
     text-align: center;
-    color: rgb(250,250,250);
-    text-transform: uppercase;
-    font-size: 1.5em;
-    border: none;
   }
-    .col{
-      position: relative;
+  #p2{
+    float: right;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  #board{
+    padding: 5px;
+    text-align: center;
+
+  }
+  .square{
+    background-color: rgb(250,250,250);
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    text-align: center;
+  }
+    .top{
+      float: left;
     }
-    .col .2{
-      border-left: 4px solid black;
-      border-right: 4px solid black;
+    .middle{
+      border-top:2px solid black;
+      border-bottom:2px solid black;
+      float: left;
     }
-  /*#row-2{
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
-  }*/
+    .bottom{
+      float: left;
+    }
+    .center{
+      border-left:2px solid black;
+      border-right:2px solid black;
+    }
+@media screen and (max-width: 585px){
+  #board{
+    width: 4em;
+  }
+  .square{
+    width: 1em;
+    height: 1em;
+  }
+}
+

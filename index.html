@@ -6,39 +6,39 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-
-  <h1>TIC TAC TOE</h1>
-
-  <section id="game-board">
-    <form>
-      <div class="row top">
-        <input type="text" name="a" class="col 1"></input>
-        <input type="text" name="b" class="col 2"></input>
-        <input type="text" name="c" class="col 3"></input>
+  <header>
+    <h1>TICTACTOE</h1>
+  </header>
+  <div class="play">
+    <section id="p1" class="scoreboard">
+      <div>
+        <h4>PLAYER 1:</h4>
+        <p></p>
       </div>
+    </section>
 
-      <div class="row mid">
-        <input type="text" name="d" class="col 1"></input>
-        <input type="text" name="e" class="col 2"></input>
-        <input type="text" name="f" class="col 3"></input>
+    <section id="p2" class="scoreboard">
+      <div>
+        <h4>PLAYER 2:</h4>
+        <p></p>
       </div>
-      <div class="row bottom">
-        <input type="text" name="g" class="col 1"></input>
-        <input type="text" name="h" class="col 2"></input>
-        <input type="text" name="i" class="col 3"></input>
-      </div>
+    </section>
 
-    </form>
-  </section>
+    <section id="game">
+        <div id="board">
+          <div class="square top left"></div>
+          <div class="square top center"></div>
+          <div class="square top right"></div>
+          <div class="square middle left"></div>
+          <div class="square middle center"></div>
+          <div class="square middle right"></div>
+          <div class="square bottom left"></div>
+          <div class="square bottom center"></div>
+          <div class="square bottom right"></div>
+        </div>
+    </section>
 
-  <section id="scoreboard">
-    <div id="player-1">
-      <p></p>
-    </div>
-    <div id="player-2">
-      <p></p>
-    </div>
-  </section>
+  </div>
 
   <section id="reset-button">
 
