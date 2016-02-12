@@ -20,6 +20,7 @@ header{
 .play{
   text-align: center;
   position: relative;
+  top: 100px;
 }
 #game{
   /*background-color: rgb(100,100,100);*/
@@ -27,17 +28,21 @@ header{
   height: 300px;
   text-align: center;
   position: relative;
-  /*left: 30%;*/
 
 }
-  #p1{
+.score{
+    position: relative;
+    top: 30px;
     padding: 10px;
     text-align: center;
-  }
-  #p2{
-    padding: 10px;
-    text-align: center;
-  }
+    margin: 20px;
+}
+    .score h4{
+      font-size: 36px
+    }
+    .score p{
+      font-size: 36px;
+    }
   #board{
     padding: 5px;
     text-align: center;
@@ -62,7 +67,30 @@ header{
       background-color: gray;
     }
 
+  img{
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+footer{
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  color: rgb(250,250,250);
+  font-size: 10px;
+  text-align: center;
+  margin-top: 100px;
+}
+a{
+  color: rgb(250,250,250);
+}
+a:hover{
+  color: rgb(250,250,250);
+}
 @media screen and (max-width: 990px){
+  .play{
+    position: relative;
+  }
   #game{
     position: relative;
     left: 30%
