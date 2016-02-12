@@ -1,0 +1,38 @@
+body{
+  background-color: rgb(250,250,250);
+  text-align: center;
+}
+h1{
+
+}
+#game-board{
+  background-color: rgb(100,100,100);
+  position: relative;
+}
+  form{
+    position: relative;
+  }
+  input{
+    background-color: rgb(200,200,200);
+    width: 3em;
+    height: 3em;
+    position: relative;
+    margin: 3px;
+    top: 200px;
+    text-align: center;
+    color: rgb(250,250,250);
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border: none;
+  }
+    .col{
+      position: relative;
+    }
+    .col .2{
+      border-left: 4px solid black;
+      border-right: 4px solid black;
+    }
+  /*#row-2{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+  }*/

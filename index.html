@@ -1,7 +1,9 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>TIC|TAC|TOE</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 
@@ -9,38 +11,33 @@
 
   <section id="game-board">
     <form>
-      <input type="text" name="a">
+      <div class="row top">
+        <input type="text" name="a" class="col 1"></input>
+        <input type="text" name="b" class="col 2"></input>
+        <input type="text" name="c" class="col 3"></input>
+      </div>
 
-      </input>
-      <input type="text" name="b">
+      <div class="row mid">
+        <input type="text" name="d" class="col 1"></input>
+        <input type="text" name="e" class="col 2"></input>
+        <input type="text" name="f" class="col 3"></input>
+      </div>
+      <div class="row bottom">
+        <input type="text" name="g" class="col 1"></input>
+        <input type="text" name="h" class="col 2"></input>
+        <input type="text" name="i" class="col 3"></input>
+      </div>
 
-      </input>
-      <input type="text" name="c">
-
-      </input>
-      <input type="text" name="d">
-
-      </input>
-      <input type="text" name="e">
-
-      </input>
-      <input type="text" name="f">
-
-      </input>
-      <input type="text" name="g">
-
-      </input>
-      <input type="text" name="h">
-
-      </input>
-      <input type="text" name="i">
-
-      </input>
     </form>
   </section>
 
   <section id="scoreboard">
-
+    <div id="player-1">
+      <p></p>
+    </div>
+    <div id="player-2">
+      <p></p>
+    </div>
   </section>
 
   <section id="reset-button">

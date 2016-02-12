@@ -12,3 +12,12 @@
 
 * Created game-board using divs. Changed game-board to form with nine inputs.
 
+
+
+**CSS**
+
+* added bootstrap & css/main.css
+
+* in **main.css** I began developing the layout for the game-board
+
+
