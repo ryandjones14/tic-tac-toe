@@ -9,35 +9,44 @@
   <header>
     <h1>TICTACTOE</h1>
   </header>
-  <div class="play">
-    <section id="p1" class="scoreboard">
-      <div>
-        <h4>PLAYER 1:</h4>
-        <p></p>
-      </div>
-    </section>
-
-    <section id="p2" class="scoreboard">
-      <div>
-        <h4>PLAYER 2:</h4>
-        <p></p>
-      </div>
-    </section>
-
-    <section id="game">
-        <div id="board">
-          <div class="square top left"></div>
-          <div class="square top center"></div>
-          <div class="square top right"></div>
-          <div class="square middle left"></div>
-          <div class="square middle center"></div>
-          <div class="square middle right"></div>
-          <div class="square bottom left"></div>
-          <div class="square bottom center"></div>
-          <div class="square bottom right"></div>
+  <div class="container">
+    <div class="play row">
+      <section id="p1" class="scoreboard col-md-3">
+        <div>
+          <h4>PLAYER 1:</h4>
+          <p></p>
         </div>
-    </section>
+      </section>
 
+
+
+      <section id="game" class="col-md-6 container">
+          <div id="board" class="row">
+            <div class="column col-xs-4">
+            <div class="square top left"></div>
+            <div class="square top center"></div>
+            <div class="square top right"></div>
+          </div>
+          <div class="column col-xs-4">
+            <div class="square middle left"></div>
+            <div class="square middle center"></div>
+            <div class="square middle right"></div>
+          </div>
+          <div class="column col-xs-4">
+            <div class="square bottom left"></div>
+            <div class="square bottom center"></div>
+            <div class="square bottom right"></div>
+          </div>
+          </div>
+      </section>
+
+      <section id="p2" class="scoreboard col-md-3">
+        <div>
+          <h4>PLAYER 2:</h4>
+          <p></p>
+        </div>
+      </section>
+    </div>
   </div>
 
   <section id="reset-button">
