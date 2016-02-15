@@ -6,19 +6,16 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-  <header>
-    <h1>TICTACTOE</h1>
-    <div class="btn-group">
-      <button type="button" class="btn btn-defaul dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Action <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-      </ul>
+  <header class="container">
+  <div class="row">
+      <h1 class="col-lg-12 col-xs-6">TICTACTOE</h1>
+    <div class="btn-group btn-group-lg col-lg-12 col-xs-6" role="group" aria-label="game-menu">
+      <button type="button" class="btn btn-default">New Game</button>
+      <button type="button" class="btn btn-default">Reset Score</button>
     </div>
-      </button>
-    </div>
+  </div>
   </header>
+
   <div class="container">
     <div class="play row">
       <section id="p1" class="score col-md-3 col-xs-12">
