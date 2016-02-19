@@ -54,7 +54,7 @@ function checkColumns(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
-      moveCount=0;
+      moveCount=1;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#b').children().hasClass("fa-circle-o") && $('#c').children().hasClass("fa-circle-o") || $('#d').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#f').children().hasClass("fa-circle-o") || $('#g').children().hasClass("fa-circle-o") && $('#h').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
@@ -70,7 +70,7 @@ function checkRows(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
-      moveCount=0;
+      moveCount=1;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#d').children().hasClass("fa-circle-o") && $('#g').children().hasClass("fa-circle-o") || $('#b').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#h').children().hasClass("fa-circle-o") || $('#c').children().hasClass("fa-circle-o") && $('#f').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
@@ -86,7 +86,7 @@ function checkDiagonals(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
-      moveCount=0;
+      moveCount=1;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o") || $('#c').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#g').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
