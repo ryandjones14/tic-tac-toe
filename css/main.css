@@ -46,6 +46,11 @@ header{
     }
     .score #p1-score, #p2-score{
       font-size: 36px;
+      background: rgba(150,150,250,.75);
+      border-radius: 3%;
+    }
+    .my-move{
+      color: yellow;
     }
   #board{
     /*padding: 5px;*/
@@ -84,7 +89,6 @@ header{
 footer{
   height: 50px;
   width: 100%;
-  background-color: black;
   color: rgb(200,200,200);
   font-size: 10px;
   text-align: center;
