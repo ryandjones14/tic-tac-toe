@@ -34,6 +34,19 @@ $('#reset-score').on('click', function(){
   $('#p2-score').html('*SCORE*');
 })
 
+$('#btn-x-marker').on('click', function(){
+  $('#x-marker').removeClass('hide')
+});
+$('#btn-o-marker').on('click', function(){
+  $('#o-marker').removeClass('hide')
+});
+$('i').mouseenter(function(){
+  $(this).addClass('gray-choice');
+})
+$('i').mouseleave(function(){
+  $(this).removeClass('gray-choice');
+})
+
 });
 
 moveCount=0;
@@ -110,3 +123,5 @@ function playerMove(){
     $('#p2').removeClass('my-move')
   }
 };
+
+

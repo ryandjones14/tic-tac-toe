@@ -34,6 +34,35 @@ header{
   /*text-align: center;*/
   /*width: 80%;*/
 }
+#markers{
+
+}
+  .fa-times{
+    font-size: 75px;
+    color: white;
+  }
+  .fa-circle-o{
+    font-size: 75px;
+    color: white;
+  }
+  ul{
+
+  }
+  li.choice{
+    font-size: 24px;
+    color: white;
+    display: inline;
+  }
+  .gray-choice{
+    color: rgb(200,200,200);
+  }
+  #default-x{
+    font-size: 24px;
+  }
+  #default-o{
+    font-size: 24px;
+  }
+
 .score{
     position: relative;
     top: 30px;
@@ -53,6 +82,7 @@ header{
     .my-move{
       border-bottom: 2px solid rgb(225,225,0);
     }
+
   #board{
     /*padding: 5px;*/
     text-align: center;
@@ -76,17 +106,7 @@ header{
     .square:hover{
       background-color: rgba(200,200,200,.6);
     }
-/*  .fa{
-    font-size: 200px;
-  }*/
-  .fa-times{
-    font-size: 75px;
-    color: white;
-  }
-  .fa-circle-o{
-    font-size: 75px;
-    color: white;
-  }
+
 footer{
   height: 50px;
   width: 100%;

@@ -19,18 +19,24 @@
   <div class="row">
     <h1 class="col-lg-12 col-xs-12">TICTACTOE</h1>
   </div>
+
   <div id="markers" class="col-xs-12">
-    <ul id="x-marker">
-      <li><i class="fa fa-times fa-6"></i></li>
-      <li><i class="fa fa-bug"></i></li>
-      <li><i class="fa fa-flag-checkered"></i></li>
-      <li><i class="fa fa-recycle"></i></li>
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" id="btn-x-marker" class="btn btn-default">X: choose a new marker</button>
+      <button type="button" id="btn-o-marker" class="btn btn-default">O: choose a new marker</button>
+    </div>
+    <ul id="x-marker" class="hide">
+      <li class="x choice 1"><i id ="default-x" class="fa fa-times"></i></li>
+      <li class="x choice 2"><i class="fa fa-bug"></i></li>
+      <li class="x choice 3"><i class="fa fa-flag-checkered"></i></li>
+      <li class="x choice 4"><i class="fa fa-recycle"></i></li>
     </ul>
-    <ul id="o-marker">
-      <li><i class="fa fa-circle-o"></i></li>
-      <li><i class="fa fa-cog"></i></li>
-      <li><i class="fa fa-globe"></i></li>
-      <li><i class="fa fa-sun-o"></i></li>
+
+    <ul id="o-marker" class="hide">
+      <li class="o choice 1"><i id="default-o" class="fa fa-circle-o"></i></li>
+      <li class="o choice 2"><i class="fa fa-cog"></i></li>
+      <li class="o choice 3"><i class="fa fa-globe"></i></li>
+      <li class="o choice 4"><i class="fa fa-sun-o"></i></li>
     </ul>
   </div>
   </header>
