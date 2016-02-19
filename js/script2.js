@@ -1,7 +1,5 @@
 $(function(){
 
-var moveCount=0;
-
 playerMove();
 
 $('.square').on('click', function() {
@@ -31,9 +29,9 @@ $('#reset-score').on('click', function(){
   $('.square').empty();
   moveCount=0;
   p1Score=0;
-  $('#p1-score').html('*SCORE*');
+  $('#p1-score').html('0');
   p2Score=0;
-  $('#p2-score').html('*SCORE*');
+  $('#p2-score').html('0');
 })
 
 });
@@ -45,6 +43,8 @@ var p2Score=0;
 function tieGame(){
   if(moveCount===9){
     alert("tie");
+    $('.square').empty();
+    moveCount=0;
   }
 }
 
@@ -53,12 +53,14 @@ function checkColumns(){
       alert("X WINS!");
       $('.square').empty();
       p1Score++;
-      $('#p1-score').html("*"+p1Score+"*");
+      $('#p1-score').html(p1Score);
+      moveCount=0;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#b').children().hasClass("fa-circle-o") && $('#c').children().hasClass("fa-circle-o") || $('#d').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#f').children().hasClass("fa-circle-o") || $('#g').children().hasClass("fa-circle-o") && $('#h').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
       p2Score++;
       $('#p2-score').html(p2Score);
+      moveCount=0;
   }
 };
 
@@ -68,11 +70,13 @@ function checkRows(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
+      moveCount=0;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#d').children().hasClass("fa-circle-o") && $('#g').children().hasClass("fa-circle-o") || $('#b').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#h').children().hasClass("fa-circle-o") || $('#c').children().hasClass("fa-circle-o") && $('#f').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
       p2Score++;
       $('#p2-score').html(p2Score);
+      moveCount=0;
   }
 };
 
@@ -82,20 +86,24 @@ function checkDiagonals(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
+      moveCount=0;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o") || $('#c').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#g').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
       p2Score++;
       $('#p2-score').html(p2Score);
+      moveCount=0;
   }
 };
 
 function playerMove(){
-  if(moveCount%2===0){
+  if(moveCount%2!=0){
     console.log('howdy');
-    $('#p1').toggleClass('my-move')
+    $('#p1').removeClass('my-move');
+    $('#p2').addClass('my-move');
   }else{
     console.log('hello');
-    $('#p2').toggleClass('my-move');
+    $('#p2').removeClass('my-move');
+    $('#p1').addClass('my-move');
   }
 };
