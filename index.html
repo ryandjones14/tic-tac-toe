@@ -2,15 +2,23 @@
 <html>
 <head>
   <title>TIC|TAC|TOE</title>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- My css file-->
   <link rel="stylesheet" type="text/css" href="css/main.css">
+<!-- jQuery-->
+  <<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- My JavaScript file-->
+  <script src="./js/script.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 <body>
 <div class="page container">
   <header>
   <div class="row">
-      <h1 class="col-lg-12 col-xs-6">TICTACTOE</h1>
-    <div class="btn-group btn-group-lg col-lg-12 col-xs-6" role="group" aria-label="game-menu">
+      <h1 class="col-lg-12 col-xs-12">TICTACTOE</h1>
+    <div class="btn-group btn-group-lg col-lg-12 col-xs-12" role="group" aria-label="game-menu">
       <button type="button" class="btn btn-default">New Game</button>
       <button type="button" class="btn btn-default">Reset Score</button>
     </div>
@@ -21,7 +29,7 @@
     <div class="play row">
       <section id="p1" class="score col-md-3 col-xs-12">
         <div>
-          <img src="http://vignette1.wikia.nocookie.net/logopedia/images/a/ad/Images3Fq3Dtic2Btac2Blogo%26hl%3Den%26usg%3D_O4BnRgi14icbZLI93k6RXymWYeY%3D%26sa%3DX%26ei%3D-CZkTM7ECYqmnQfHt9zNAQ%26sqi%3D2%26ved%3D0CBoQ9QEwAA.gif/revision/latest?cb=20100913214010" alt="Tic Tacs">
+          <i class="fa fa-times fa-6"></i>
           <div id="p1-score">*SCORE*</div>
         </div>
       </section>
@@ -30,26 +38,26 @@
         <section id="game">
           <div id="board" class="row">
             <div class="column col-xs-4">
-            <div class="square top left"></div>
-            <div class="square top center"></div>
-            <div class="square top right"></div>
+            <div id="a" class="square left top"></div>
+            <div id="b" class="square left middle"></div>
+            <div id="c" class="square left bottom"></div>
           </div>
           <div class="column col-xs-4">
-            <div class="square middle left"></div>
-            <div class="square middle center"></div>
-            <div class="square middle right"></div>
+            <div id="d" class="square center top"></div>
+            <div id="e" class="square center middle"></div>
+            <div id="f" class="square center bottom"></div>
           </div>
           <div class="column col-xs-4">
-            <div class="square bottom left"></div>
-            <div class="square bottom center"></div>
-            <div class="square bottom right"></div>
+            <div id="g" class="square right top"></div>
+            <div id="h" class="square right middle"></div>
+            <div id="i" class="square right bottom"></div>
           </div>
         </section>
       </section>
 
       <section class="col-md-3 col-xs-12">
         <div id="p2" class="score">
-          <img src="images/toe.png" alt="Big Toe">
+          <i class="fa fa-circle-o"></i>
           <div id="p2-score">*SCORE*</div>
         </div>
       </section>
