@@ -1,14 +1,17 @@
 body{
-  background-color: rgb(250,250,230);
+  background-image: url("https://images.unsplash.com/photo-1450849608880-6f787542c88a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=786a67dca1d8791d181bfd90b16240d9");
+  background-size: cover;
   text-align: center;
+}
+.page{
+  background-color: rgba(75,75,75,.4);
 }
 header{
   /*height: 150px;*/
   width: 100%;
-  background-color: black;
-  color: rgb(250,250,230);
+  color: rgb(200,200,200);
   padding: 15px;
-  /*margin-top: -20px;*/
+  /*margin: 0 -100px;*/
   /*position: relative;*/
 }
   h1{
@@ -35,6 +38,7 @@ header{
     position: relative;
     top: 30px;
     text-align: center;
+    color: rgb(200,200,200);
     /*margin: 20px;*/
 }
     .score h4{
@@ -75,24 +79,22 @@ footer{
   height: 50px;
   width: 100%;
   background-color: black;
-  color: rgb(250,250,230);
+  color: rgb(200,200,200);
   font-size: 10px;
   text-align: center;
   margin-top: 100px;
 
 }
 a{
-  color: rgb(250,250,230);
+  color: rgb(200,200,200);
 }
 a:hover{
-  color: rgb(250,250,230);
+  color: rgb(200,200,200);
 }
 @media screen and (max-width: 990px){
   header{
     /*height: 100px;*/
-  }
-  h1{
-    font-size: 20px;
+    width: 100%;
   }
   .play{
     text-align: center;
