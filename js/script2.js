@@ -22,7 +22,19 @@ $('.square').on('click', function() {
   tieGame();
 });
 
+$('#reset-board').on('click', function(){
+  $('.square').empty();
+  moveCount=0;
+});
 
+$('#reset-score').on('click', function(){
+  $('.square').empty();
+  moveCount=0;
+  p1Score=0;
+  $('#p1-score').html('*SCORE*');
+  p2Score=0;
+  $('#p2-score').html('*SCORE*');
+})
 
 });
 
@@ -41,7 +53,7 @@ function checkColumns(){
       alert("X WINS!");
       $('.square').empty();
       p1Score++;
-      $('#p1-score').html(p1Score);
+      $('#p1-score').html("*"+p1Score+"*");
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#b').children().hasClass("fa-circle-o") && $('#c').children().hasClass("fa-circle-o") || $('#d').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#f').children().hasClass("fa-circle-o") || $('#g').children().hasClass("fa-circle-o") && $('#h').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();

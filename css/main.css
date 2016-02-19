@@ -48,9 +48,10 @@ header{
       font-size: 36px;
       background: rgba(150,150,250,.75);
       border-radius: 3%;
+      color: rgb(225,225,0);
     }
     .my-move{
-      color: yellow;
+      border-bottom: 2px solid rgb(225,225,0);
     }
   #board{
     /*padding: 5px;*/
@@ -93,6 +94,8 @@ footer{
   font-size: 10px;
   text-align: center;
   margin-top: 100px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
 
 }
 a{
@@ -100,6 +103,12 @@ a{
 }
 a:hover{
   color: rgb(200,200,200);
+}
+#reset-game{
+  float: left;
+}
+#reset-score{
+  float: right;
 }
 @media screen and (max-width: 990px){
   header{
@@ -120,7 +129,3 @@ a:hover{
   #board{
     margin-top: 20px;
   }
-  footer{
-    display: none;
-  }
-}
