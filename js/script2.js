@@ -2,15 +2,21 @@ $(function(){
 
 playerMove();
 
-$('.square').on('click', function() {
-  if(moveCount%2===0){
-    $(this).append('<i class="fa fa-times"></i>');
-    moveCount++;
-    console.log(moveCount);
-  }else if (moveCount%1===0){
+$('.square').on('click', function(){
+  if($(this).children().hasClass('fa')){ //user can't play on same spot
+    return false;
+  }else if (xMoveCount%2!=0){ //Player O plays
     $(this).append('<i class="fa fa-circle-o"></i>');
-    moveCount++;
-    console.log(moveCount);
+    xMoveCount++;
+    oMoveCount++;
+    console.log(xMoveCount);
+    console.log(oMoveCount);
+  } else if (xMoveCount%2===0){ //Player X plays
+    $(this).append('<i class="fa fa-times"></i>');
+    xMoveCount++;
+    oMoveCount++;
+    console.log(xMoveCount);
+    console.log(oMoveCount);
   }
 
   playerMove();
@@ -22,29 +28,40 @@ $('.square').on('click', function() {
 
 $('#reset-board').on('click', function(){
   $('.square').empty();
-  moveCount=0;
+  xMoveCount=0;
 });
 
 $('#reset-score').on('click', function(){
   $('.square').empty();
-  moveCount=0;
+  xMoveCount=0;
   p1Score=0;
   $('#p1-score').html('0');
   p2Score=0;
   $('#p2-score').html('0');
+});
+
+$('h1').on('click', function(){
+  changeBackground()
 })
 
 });
 
-moveCount=0;
+var xMoveCount=0;
+var oMoveCount=0;
 var p1Score=0;
 var p2Score=0;
 
 function tieGame(){
-  if(moveCount===9){
+  if(xMoveCount===9){
     alert("tie");
     $('.square').empty();
-    moveCount=0;
+    xMoveCount=0;
+    oMoveCount=0;
+  }else if (oMoveCount===10){
+    alert("tie");
+    $('.square').empty();
+    xMoveCount=-1;
+    oMoveCount=1;
   }
 }
 
@@ -54,13 +71,15 @@ function checkColumns(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
-      moveCount=1;
+      xMoveCount=-1;
+      oMoveCount=1;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#b').children().hasClass("fa-circle-o") && $('#c').children().hasClass("fa-circle-o") || $('#d').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#f').children().hasClass("fa-circle-o") || $('#g').children().hasClass("fa-circle-o") && $('#h').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
       p2Score++;
       $('#p2-score').html(p2Score);
-      moveCount=0;
+      xMoveCount=0;
+      oMoveCount=0;
   }
 };
 
@@ -70,13 +89,15 @@ function checkRows(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
-      moveCount=1;
+      xMoveCount=-1;
+      oMoveCount=1;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#d').children().hasClass("fa-circle-o") && $('#g').children().hasClass("fa-circle-o") || $('#b').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#h').children().hasClass("fa-circle-o") || $('#c').children().hasClass("fa-circle-o") && $('#f').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
       p2Score++;
       $('#p2-score').html(p2Score);
-      moveCount=0;
+      xMoveCount=0;
+      oMoveCount=0;
   }
 };
 
@@ -86,18 +107,20 @@ function checkDiagonals(){
       $('.square').empty();
       p1Score++;
       $('#p1-score').html(p1Score);
-      moveCount=1;
+      xMoveCount=-1;
+      oMoveCount=1;
   }else if ($('#a').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#i').children().hasClass("fa-circle-o") || $('#c').children().hasClass("fa-circle-o") && $('#e').children().hasClass("fa-circle-o") && $('#g').children().hasClass("fa-circle-o")){
       alert("O WINS!")
       $('.square').empty();
       p2Score++;
       $('#p2-score').html(p2Score);
-      moveCount=0;
+      xMoveCount=0;
+      oMoveCount=0;
   }
 };
 
 function playerMove(){
-  if(moveCount%2!=0){
+  if(oMoveCount%2!=0){
     console.log('howdy');
     $('#p1').removeClass('my-move');
     $('#p2').addClass('my-move');
@@ -106,4 +129,10 @@ function playerMove(){
     $('#p2').removeClass('my-move');
     $('#p1').addClass('my-move');
   }
+};
+
+function changeBackground(){
+  debugger
+  var randomBackground=Math.floor(Math.random*5);
+  $('body').removeClass().addClass(random-background)
 };
