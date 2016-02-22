@@ -1,11 +1,13 @@
 $(function(){
 
+
 playerMove();
 
 $('.square').on('click', function(){
   if($(this).children().hasClass('fa')){ //user can't play on same spot
     return false;
   }else if (xMoveCount%2!=0){ //Player O plays
+
     $(this).append('<i class="fa fa-circle-o"></i>');
     xMoveCount++;
     oMoveCount++;
@@ -38,6 +40,7 @@ $('#reset-score').on('click', function(){
   $('#p1-score').html('0');
   p2Score=0;
   $('#p2-score').html('0');
+
 });
 
 $('#background-change').on('click', function(){
@@ -46,8 +49,10 @@ $('#background-change').on('click', function(){
 
 });
 
+
 var xMoveCount=0;
 var oMoveCount=0;
+
 var p1Score=0;
 var p2Score=0;
 
@@ -80,6 +85,7 @@ function checkColumns(){
       $('#p2-score').html(p2Score);
       xMoveCount=0;
       oMoveCount=0;
+
   }
 };
 
