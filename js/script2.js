@@ -134,6 +134,5 @@ function playerMove(){
 function changeBackground(){
   var randomBackground=Math.floor(Math.random()*5);
   var backgroundChange=randomBackground.toString();
-  debugger
   $('body').removeClass().addClass("back"+backgroundChange);
 };
