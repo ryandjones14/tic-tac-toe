@@ -25,6 +25,7 @@
 }
 .page{
   background-color: rgba(75,75,75,.4);
+  width:100%;
 }
 header{
   width: 100%;
