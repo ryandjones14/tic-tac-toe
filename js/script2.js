@@ -7,7 +7,6 @@ $('.square').on('click', function(){
   if($(this).children().hasClass('fa')){ //user can't play on same spot
     return false;
   }else if (xMoveCount%2!=0){ //Player O plays
-
     $(this).append('<i class="fa fa-circle-o"></i>');
     xMoveCount++;
     oMoveCount++;
