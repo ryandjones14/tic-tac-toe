@@ -40,7 +40,7 @@ $('#reset-score').on('click', function(){
   $('#p2-score').html('0');
 });
 
-$('h1').on('click', function(){
+$('#background-change').on('click', function(){
   changeBackground()
 })
 
@@ -132,7 +132,8 @@ function playerMove(){
 };
 
 function changeBackground(){
+  var randomBackground=Math.floor(Math.random()*5);
+  var backgroundChange=randomBackground.toString();
   debugger
-  var randomBackground=Math.floor(Math.random*5);
-  $('body').removeClass().addClass(random-background)
+  $('body').removeClass().addClass("back"+backgroundChange);
 };
