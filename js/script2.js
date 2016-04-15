@@ -30,6 +30,7 @@ $('.square').on('click', function(){
 $('#reset-board').on('click', function(){
   $('.square').empty();
   xMoveCount=0;
+  oMoveCount=0;
 });
 
 $('#reset-score').on('click', function(){
