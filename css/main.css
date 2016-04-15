@@ -23,9 +23,12 @@
   background-size: cover;
   text-align: center;
 }
+body{
+  font-family: 'Raleway', sans-serif;
+}
 .page{
   background-color: rgba(75,75,75,.4);
-  width:100%;
+  width: 100%;
 }
 header{
   width: 100%;
